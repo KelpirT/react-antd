@@ -6,9 +6,9 @@ import NewPass from './component/NewPass'
 
 const App: React.FC = () =>(
   <div>
-    <Login />
+    {/* <Login /> */}
     {/* <ForgotPass/> */}
-    {/* <NewPass /> */}
+    <NewPass />
   </div>
     );
 export default App;

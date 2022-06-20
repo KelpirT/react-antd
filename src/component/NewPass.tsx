@@ -62,7 +62,7 @@ function NewPass() {
                             <Form.Item
                                 // label="Mật khẩu *"
                                 name="password"
-                                rules={[{ required: true, message: 'Please input your password!' }]}
+                                rules={[{ required: true, message: 'Please input your new password!' }]}
                                 //className="login-password"
                             >
                                 <Input.Password className="login-password"/>
@@ -70,8 +70,8 @@ function NewPass() {
                             <h2 className="text1">Nhập lại mật khẩu *</h2>
                             <Form.Item
                                 // label="Nhập lại mật khẩu *"
-                                name="password"
-                                rules={[{ required: true, message: 'Please input your password!' }]}
+                                name="password1"
+                                rules={[{ required: true, message: 'Please confirm your password!' }]}
                                 //className="login-password"
                             >
                                 <Input.Password className="login-password"/>
