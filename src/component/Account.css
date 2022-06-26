@@ -1,0 +1,37 @@
+.logoalta {
+    margin-left: 20px;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
+.title-name {
+    color: #FF9138;
+    margin-top: 25px;
+    margin-bottom: auto;
+    margin-left: 70px
+}
+
+.title-avatar {
+    margin-top: 3.5vh;
+    margin-bottom: auto;
+    margin-right: 10px
+}
+
+.title-n {
+    margin-top: 2vh;
+    font-size: 18px
+}
+
+.button-logout {
+    color: #FF9138;
+    margin-left: 25px;
+    margin-top: 40vh;
+    border: 20px 10px;
+    width: 70%;
+    border-radius: 6px
+}
+
+.icon-logout {
+    margin-top: 6px
+}
