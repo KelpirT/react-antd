@@ -1,18 +1,18 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Login from './component/Login'
-import ForgotPass from './component/ForgotPass';
-import NewPass from './component/NewPass'
-import Account from './component/Account';
-import Devices from './component/Devices'
+import ContentRoute from './component/Route/ContentRoute';
 
 const App: React.FC = () =>(
   <div>
-    {/* <Login /> */}
-    {/* <ForgotPass/> */}
-    {/* <NewPass /> */}
-    {/* <Account/> */}
-    <Devices/>
+    <div className="App">
+          <BrowserRouter>
+            <Routes>
+              <Route path="/*" element={<ContentRoute />} />
+              {/* <Route path="/auth/*" element={<AuthRoutes />} /> */}
+            </Routes>
+          </BrowserRouter>
+        </div>
   </div>
     );
 export default App;

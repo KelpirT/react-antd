@@ -134,6 +134,7 @@
 
 .inputContainer {
     margin-right: 100px;
+    margin-left: 50px
 }
 
 .selectContianer {
@@ -149,33 +150,52 @@
     margin-left: 45px
 }
 
-.text-1 {
+.text1 {
     margin-left: 0px;
     font-size: 18px;
 }
 
-.first-select {
+.select-1 {
     margin-left: 0px;
     text-align: left;
 }
 
-.text-2 {
-    margin-left: 90px;
+.text2 {
+    margin-left: 15px;
     font-size: 18px;
 }
 
-.second-select {
-    margin-right: -180px;
+.select-2 {
+    margin-left: -65px;
+    text-align: left;
+}
+
+.date-pick2 {
+    margin-left: 55px;
     border-radius: 10px;
     text-align: left
 }
 
-.thirst-select {
-    border-radius: 10px;
-    margin-right: 0px;
+.text3 {
+    margin-left: 35px;
+    font-size: 18px;
 }
 
-.text-3 {
+.select-3 {
+    margin-left: -30px;
+    text-align: left;
+}
+
+.text4 {
+    margin-left: 55px;
+    font-size: 18px;
+}
+
+.text5 {
     margin-left: 10px;
     font-size: 18px;
+}
+
+.select-5 {
+    border-radius: 10px;
 }

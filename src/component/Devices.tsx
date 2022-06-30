@@ -1,30 +1,22 @@
-
 import {
-UserOutlined,
+CaretDownOutlined,
+PlusSquareFilled
 } from '@ant-design/icons';
-import { Form , Input, Checkbox, Button, Row, Col, Space, Layout, Menu, Avatar, MenuProps, Tag, Select } from 'antd';
+import { Form , Input, Checkbox, Button, Row, Col, Space, Layout, Menu, Avatar, MenuProps, Tag, Select, Dropdown, Tooltip } from 'antd';
 import { Typography } from 'antd';
 import React, { useEffect, useState } from 'react'
-import '../component/Account.css';
 import '../component/Devices.css';
-import Logo from '../component/Image/Logo.png';
-import Dashboard from '../component/Image/icon/dashboard.png'
-import Computer from '../component/Image/icon/computer.png'
-import Layer from '../component/Image/icon/layer.png'
-import Question from '../component/Image/icon/question.png'
-import Report from '../component/Image/icon/report.png'
-import Setting from '../component/Image/icon/setting.png'
-import Logout from '../component/Image/icon/logout.png'
 import Table, { ColumnsType } from 'antd/lib/table';
-const { Header, Footer, Sider, Content } = Layout;
+import { Link } from 'react-router-dom';
 const { Title } = Typography;
-type MenuItem = Required<MenuProps>['items'][number];
+
 
 const { Option } = Select;
 
 const handleChange = (value: string) => {
   console.log(`selected ${value}`);
 };
+
 interface DataType {
   key: string;
   ma:string;
@@ -113,7 +105,8 @@ const columns: ColumnsType<DataType> = [
     title: '',
     dataIndex: 'detail',
     key: 'detail',
-    render: text => <a>{text}</a>,
+    render: (text) => <Link to={'/managedevice'}>{text}</Link>
+
   },
   {
     title: '',
@@ -336,12 +329,6 @@ const data: DataType[] = [
   },
 
 ];
-
-
-
-
-
-
 interface Size {
     width: number;
     height: number ;
@@ -369,115 +356,74 @@ function useWindowSize(){
     return windowSize;
   }
 
-  function getItem(
-    label: React.ReactNode,
-    key?: React.Key | null,
-    icon?: React.ReactNode,
-    children?: MenuItem[],
-    theme?: 'light' | 'dark',
-  ): MenuItem {
-    return {
-      key,
-      icon,
-      children,
-      label,
-      theme,
-    } as MenuItem;
-  }
 
-
-
-function Account() {
-    const size = useWindowSize();
-    const [collapsed, setCollapsed] = useState(false);
-    
-
-    const [current, setCurrent] = useState('1');
-
-
-
-    const onClick: MenuProps['onClick'] = e => {
-      setCurrent(e.key);
-    };
-
-    const items: MenuItem[] = [
-      getItem('Dashboard', '1' ,<img src={Dashboard} style={{ width: "14%", height: "55%" }} />),
-      getItem('Thiết bị', '2', <img src={Computer} style={{ width: "14%", height: "55%" }} />),
-      getItem('Dịch vụ', '3' ,<img src={Question} style={{ width: "14%", height: "55%" }} />),
-      getItem('Cấp số', '4', <img src={Layer} style={{ width: "14%", height: "55%" }} />),
-      getItem('Báo cáo', '5' ,<img src={Report} style={{ width: "14%", height: "55%" }} />),
-      getItem(
-        'Cài đặt hệ thống',
-        'sub1',
-        <img src={Setting} style={{ width: "14%", height: "55%" }}/>,
-        [getItem('Quản lý vai trò', '7'), getItem('Quản lý tài khoản', '8'), getItem('Nhật ký người dùng', '9')],
-      ),
-      
-    ];
-    
-    
-    
+function Devices() {
     return (
         <div>
-            <Layout style={{ "height": "100vh" }}>
-            <Sider trigger={null} collapsible collapsed={collapsed} style={{background:"white"}}>
-              <div className="logo" />
-              <img
-                            className="logoalta"
-                            src={Logo}
-                            alt="Logo Alta"
-                            style={{ width: "70%", height: "15%" }} 
-                        />
-              <Menu
-                onClick={onClick}
-                // style={{ width: 256 }}
-                defaultOpenKeys={['2']}
-                selectedKeys={[current]}
-                mode="vertical"
-                theme="light"
-                items={items}
-              />
-
-              <Button style={{ background :"#FFF2E7" }} className="button-logout" > 
-                <img src={Logout} className="icon-logout" style={{ width: "14%", height: "55%" , float:'left'}} /> 
-                  Đăng xuất
-              </Button>
- 
-                
-            </Sider>
-                <Layout>
-                    <Header style={{ "height": '13.5vh' ,background:'#EAEAEC', padding:10}}>
-                      <div>
-
-                      <h2 style={{ float:'right' }} className='title-n'>Nguyễn Văn A</h2>
-                      <Avatar size="large" icon={<UserOutlined /> } className='title-avatar' style={{ float:'right' }}/>
-                        
-                      </div>
-                      <h2 style={{color:'black'}} className='title-name'> Thiết bị {'>'} Danh sách thiết bị</h2>
-                        
-
-                    </Header>
-                    <Content style={{ background :"#EAEAEC" }} >
-                      <h2 className='title-1' style={{color:'#FF9138'}}>Danh sách thiết bị</h2>
-                      <div className='content-h'>
-                        <Select defaultValue="all" style={{ width: 120 }} onChange={handleChange}>
-                          <Option value="all">Tất cả</Option>
-                          <Option value="yes">Hoạt động</Option>
-                          <Option value="no">Ngưng hoạt động</Option>
-                        </Select>
-                        <Select defaultValue="all" style={{ width: 120 }} onChange={handleChange}>
-                          <Option value="all">Tất cả</Option>
-                          <Option value="yes">Kết nối</Option>
-                          <Option value="no">Mất kết nối</Option>
-                        </Select>
-                        <Input placeholder="Nhập từ khóa" style={{ width: '10%' }}/>
-                      </div>
-                      <Table columns={columns} dataSource={data} style={{ width: '90%' }} className='table-content'/>;
-                    </Content>
-                    
-                </Layout>
-            </Layout>
+          <Row>
+            <Col>
+              <h2 className='title-1' style={{color:'#FF9138'}}>Danh sách thiết bị</h2>
+            </Col>
+          </Row>
+          <Form layout="vertical">
+            <Row justify="space-between" className='inputContainer'>
+              <Col>
+                <Space size={24}>
+                  <Form.Item
+                  label={<Typography.Text strong className="text-1">Trạng thái hoạt động</Typography.Text>}
+                  className='selectContianer'
+                  >      
+                    <Select defaultValue="all" style={{ width: 300}} onChange={handleChange} className="first-select" size="large" suffixIcon={
+                      <CaretDownOutlined
+                        style={{ fontSize: "20px", color: "#FF7506" }}
+                      />
+                    }>
+                            <Option value="all">Tất cả</Option>
+                            <Option value="yes">Hoạt động</Option>
+                            <Option value="no">Ngưng hoạt động</Option>
+                          </Select>
+                      </Form.Item>
+                      <Form.Item
+                      label={<Typography.Text strong className="text-2">Trạng thái kết nối</Typography.Text>}
+                      className='selectContianer'
+                      >
+                          <Select defaultValue="all" style={{ width: 300}} onChange={handleChange} className="second-select" size="large" suffixIcon={
+                            <CaretDownOutlined
+                              style={{ fontSize: "20px", color: "#FF7506" }}
+                            />
+                          }>
+                            <Option value="all">Tất cả</Option>
+                            <Option value="yes">Kết nối</Option>
+                            <Option value="no">Mất kết nối</Option>
+                          </Select>
+                      </Form.Item>
+                  </Space>
+                </Col>
+                <Col flex="450px">
+                  <Form.Item
+                    label={<Typography.Text strong className="text-3">Từ khóa</Typography.Text>}
+                  >
+                        <Input placeholder="Nhập từ khóa" style={{ width: '95%' }} className="thirst-select" size="large"/>
+                  </Form.Item>
+                </Col>
+              
+            </Row>
+          </Form>
+                      <Row>
+                        <Col span={23} flex="100%">
+                          <Table columns={columns} dataSource={data} style={{ width: '95%', height: '90%' }} className='table-content' size="large" pagination={{ pageSize: 9 }}/>;
+                        </Col>
+                        <Col span={1}>
+                                <Button
+                                type="primary"
+                                className="add"
+                                style={{marginTop:"20px",height:"6rem",width:"4rem", position:"absolute",right:"0",textAlign:"center",background:"#FFF2E7"}}
+                                >
+                                  <PlusSquareFilled  size={20}/><br />Thêm<br/>thiết bị
+                                </Button>
+                        </Col>
+                        </Row>
         </div>
     );
 }
-export default Account;
+export default Devices;
