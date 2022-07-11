@@ -1,0 +1,86 @@
+.update-device-title {
+    font-size: 20px;
+    color: rgb(255, 145, 56);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.card-account-1 {
+    margin-left: 45px;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.ant-select-selection>div {
+    border-radius: 15px;
+}
+
+.input-update-form {
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    margin-top: -15px;
+    text-align: left
+}
+
+.select-update {
+    border-radius: 10px;
+    margin-top: -5px;
+    margin-left: 0px;
+    text-align: left
+}
+
+.input-update-form1 {
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    margin-top: -15px;
+}
+
+.input-update-form2 {
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    margin-top: -2px;
+}
+
+.input-update-form3 {
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    margin-top: -5px;
+}
+
+.input-tag {
+    border-radius: 10px;
+    border-color: rgb(255, 145, 56);
+}
+
+.gr-butoon-update {
+    margin-top: 50px;
+    margin-left: 292%;
+    /* margin-right: auto; */
+}
+
+.button-cancel-update {
+    margin-left: -6rem;
+    margin-right: 2rem;
+    background-color: white;
+    color: #FF9138;
+    font-weight: 500;
+    border: 1px solid #FF9138;
+}
+
+.button-continue-update {
+    /* margin-left: auto;
+    margin-right: auto; */
+    color: white;
+    background-color: #FF9138;
+    font-weight: 500;
+    border: none;
+}
+
+.waring-update {
+    margin-top: -20px;
+    color: #FF9138;
+}

@@ -1,0 +1,34 @@
+.new-number {
+    font-size: 35px;
+    font-weight: 500;
+    color: #FF9138;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.new-number-1 {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    margin-left: 400px;
+    margin-right: auto;
+}
+
+.new-number-2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.select-newnumber {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.gr-butoon-number {
+    margin-top: 100px;
+    margin-left: 600px;
+}

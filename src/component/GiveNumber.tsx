@@ -8,6 +8,7 @@ import {
   import React, { useEffect, useState } from 'react'
   import '../component/GiveNumber.css'
   import Table, { ColumnsType } from 'antd/lib/table';
+import { Link } from 'react-router-dom';
   const { Title } = Typography;
   
   
@@ -93,7 +94,7 @@ import {
       title: '',
       dataIndex: 'detail',
       key: 'detail',
-      render: text => <a>{text}</a>,
+      render: (text) => <Link to={'/detailnumber'}>{text}</Link>
     },
   
   ]
@@ -333,13 +334,15 @@ import {
                             <Table columns={columns} dataSource={data} style={{ width: '95%', height: '90%' }} className='table-content' size="large" pagination={{ pageSize: 9 }}/>;
                           </Col>
                           <Col span={1}>
+                            <Link to={'/newnumber'}>
                                   <Button
                                   type="primary"
                                   className="add"
-                                  style={{marginTop:"20px",height:"6rem",width:"4rem", position:"absolute",right:"0",textAlign:"center",background:"#FFF2E7"}}
+                                  style={{marginTop:"20px",height:"6rem",width:"4rem", position:"absolute",right:"0",textAlign:"center",background:"#FFF2E7",borderRadius:'10px'}}
                                   >
                                     <PlusSquareFilled  size={20}/><br />Cấp<br/>số mới
                                   </Button>
+                            </Link>
                           </Col>
                           </Row>
           </div>

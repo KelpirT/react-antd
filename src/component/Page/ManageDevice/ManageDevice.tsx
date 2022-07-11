@@ -4,6 +4,7 @@ import {
 import { Button, Card, Col, Row } from 'antd';
 import "../ManageDevice/ManageDevice.css"
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 
 const ManageDevice = () => {
   return (
@@ -76,13 +77,15 @@ const ManageDevice = () => {
                         </Card>
                         </Col>
                         <Col span={1}>
+                            <Link to="/updatedevice">
                                 <Button
                                 type="primary"
                                 className="add"
-                                style={{marginTop:"20px",height:"6rem",width:"4rem", position:"absolute",right:"0",textAlign:"center",background:"#FFF2E7"}}
+                                style={{marginTop:"20px",height:"6rem",width:"5rem", position:"absolute",right:"0",textAlign:"center",background:"#FFF2E7"}}
                                 >
-                                  <PlusSquareFilled  size={20}/><br />Thêm<br/>thiết bị
+                                  <PlusSquareFilled  size={20}/><br />Cập nhật<br/>thiết bị
                                 </Button>
+                            </Link>
                         </Col>
                         </Row>
     </div>

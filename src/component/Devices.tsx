@@ -112,7 +112,7 @@ const columns: ColumnsType<DataType> = [
     title: '',
     dataIndex: 'update',
     key: 'update',
-    render: text => <a>{text}</a>,
+    render: (text) => <Link to={'/updatedevice'}>{text}</Link>
   },
 
 ]
@@ -414,6 +414,7 @@ function Devices() {
                           <Table columns={columns} dataSource={data} style={{ width: '95%', height: '90%' }} className='table-content' size="large" pagination={{ pageSize: 9 }}/>;
                         </Col>
                         <Col span={1}>
+                          <Link to="/adddevice">
                                 <Button
                                 type="primary"
                                 className="add"
@@ -421,6 +422,7 @@ function Devices() {
                                 >
                                   <PlusSquareFilled  size={20}/><br />Thêm<br/>thiết bị
                                 </Button>
+                          </Link>
                         </Col>
                         </Row>
         </div>

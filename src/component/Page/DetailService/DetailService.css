@@ -1,0 +1,33 @@
+.card-service-right {
+    border-radius: 15px;
+}
+
+.status-service {
+    font-size: 18px
+}
+
+.chose-status-service {
+    border-radius: 10px;
+    margin-left: -150px;
+}
+
+.chose-time-service {
+    font-size: 18px;
+    margin-left: -320px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.chose-time-service-range {
+    margin-left: -100px;
+}
+
+.search-service {
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.input-search-service {
+    border-radius: 10px;
+    margin-left: 30px
+}

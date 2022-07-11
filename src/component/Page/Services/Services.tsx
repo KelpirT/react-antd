@@ -8,6 +8,7 @@ import {
     import React, { useEffect, useState } from 'react'
     import '../Services/Services.css';
     import Table, { ColumnsType } from 'antd/lib/table';
+import { Link } from 'react-router-dom';
     const { Title } = Typography;
     
     
@@ -72,13 +73,13 @@ import {
         title: '',
         dataIndex: 'detail',
         key: 'detail',
-        render: text => <a>{text}</a>,
+        render: (text) => <Link to={'/detailservice'}>{text}</Link>
       },
       {
         title: '',
         dataIndex: 'update',
         key: 'update',
-        render: text => <a>{text}</a>,
+        render: (text) => <Link to={'/addservice'}>{text}</Link>
       },
     
     ]
@@ -357,6 +358,7 @@ import {
                               <Table columns={columns} dataSource={data} style={{ width: '95%', height: '90%' }} className='table-content1' size="large" pagination={{ pageSize: 9 }}/>;
                             </Col>
                             <Col span={1}>
+                              <Link to="/addservice">
                                     <Button
                                     type="primary"
                                     className="add"
@@ -364,6 +366,7 @@ import {
                                     >
                                       <PlusSquareFilled  size={20}/><br />Thêm<br/>dịch vụ
                                     </Button>
+                              </Link>
                             </Col>
                             </Row>
             </div>
