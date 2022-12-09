@@ -23,6 +23,17 @@ import UpdateAccount from '../Page/UpdateAccount/UpdateAccount';
 import AddAccount from '../Page/AddAccount/AddAccount';
 import Account from '../Account'
 import Dashboard from '../Page/Dashboard/Dashboard'
+import { HDashboard } from '../HeaderTitle/Dashboard/HDashboard';
+import { HDevices } from '../HeaderTitle/Devices/HDevices';
+import { HDetailDevices } from '../HeaderTitle/Devices/HDetailDevices';
+import { HUpdateDevices } from '../HeaderTitle/Devices/HUpdateDevices';
+import { HAddDevices } from '../HeaderTitle/Devices/HAddDevices';
+import { HServices,HDetailServices,HUpdateServices } from '../HeaderTitle/Services/HServices';
+import { HGiveNumber,HDetailGiveNumber,HNewGiveNumber } from '../HeaderTitle/HGiveNumber/HGiveNumber';
+import { HReport } from '../HeaderTitle/Report/HReport';
+import { HRole, HUpdateRole, HAddRole } from '../HeaderTitle/Role/HRole';
+import { HAddAccount, HAccount, HUpdateAccount,HMAccount } from '../HeaderTitle/Account/HAccount';
+
 const { Header, Footer, Sider, Content } = Layout;
 
 function ContentRoute  () {
@@ -37,7 +48,70 @@ function ContentRoute  () {
             </Sider>
                 <Layout>
                     <Header style={{ "height": '13.5vh' ,background:'#EAEAEC', padding:10}}>
+                    <div className="header-layout">
+                    <Routes>
+                            <Route path="/dashboard">
+                                <Route index element={<HDashboard/>}/>
+                            </Route>
+                            <Route path="/devices">
+                                <Route index element={<HDevices/>}/>
+                            </Route>
+                            <Route path="/managedevice">
+                                <Route index element={<HDetailDevices/>}/>
+                            </Route>
+                            <Route path="/updatedevice">
+                                <Route index element={<HUpdateDevices/>}/>
+                            </Route>
+                            <Route path="/adddevice">
+                                <Route index element={<HAddDevices/>}/>
+                            </Route>
+                            <Route path="/services">
+                                <Route index element={<HServices/>}/>
+                            </Route>
+                            <Route path="/detailservice">
+                                <Route index element={<HDetailServices/>}/>
+                            </Route>
+                            <Route path="/addservice">
+                                <Route index element={<HUpdateServices/>}/>
+                            </Route>
+                            <Route path="/givenumber">
+                                <Route index element={<HGiveNumber/>}/>
+                            </Route>
+                            <Route path="/detailnumber">
+                                <Route index element={<HDetailGiveNumber/>}/>
+                            </Route>
+                            <Route path="/newnumber">
+                                <Route index element={<HNewGiveNumber/>}/>
+                            </Route>
+                            <Route path="/report">
+                                <Route index element={<HReport/>}/>
+                            </Route>
+                            <Route path="/setting/manage-roles">
+                                <Route index element={<HRole/>}/>
+                            </Route>
+                            <Route path="/setting/manage-roles/update">
+                                <Route index element={<HUpdateRole/>}/>
+                            </Route>
+                            <Route path="/setting/manage-roles/add">
+                                <Route index element={<HAddRole/>}/>
+                            </Route>
+                            <Route path="/update-account">
+                                <Route index element={<HUpdateAccount/>}/>
+                            </Route>
+                            <Route path="/add-account">
+                                <Route index element={<HAddAccount/>}/>
+                            </Route>
+                            <Route path="/setting/accounts">
+                                <Route index element={<HAccount/>}/>
+                            </Route>
+                            <Route path="/account">
+                                <Route index element={<HMAccount/>}/>
+                            </Route>
+
+                        </Routes>
+                        
                       <HeaderPage/>
+                      </div>
                     </Header>
                     <Content style={{ background :"#EAEAEC" }} >
                         <Routes>

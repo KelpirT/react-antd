@@ -1,0 +1,45 @@
+{
+    "user": [{
+            "key": "1",
+            "ma": "123",
+            "name": "bcd",
+            "address": "192.168.1.10",
+            "status": "Ngưng hoạt động",
+            "connect": "Mất kết nối",
+            "service": "Khám mắt, khám tim mạch",
+            "detail": "'Chi tiết'",
+            "update": "'Cập nhật'",
+            "loai": "Kiosk",
+            "username": "abc123",
+            "password": "123"
+        },
+        {
+            "key": "2",
+            "ma": "456",
+            "name": "abc",
+            "address": "192.168.1.10",
+            "status": "Ngưng hoạt động",
+            "connect": "Mất kết nối",
+            "service": "Khám mắt, khám tim mạch",
+            "detail": "'Chi tiết'",
+            "update": "'Cập nhật'",
+            "loai": "DisplayCounter",
+            "username": "123456",
+            "password": "123"
+        },
+        {
+            "key": "3",
+            "ma": "abc",
+            "name": "abc",
+            "address": "abc",
+            "status": "Ngưng hoạt động",
+            "connect": "Mất kết nối",
+            "service": "Khám mắt, khám tim mạch",
+            "detail": "'Chi tiết'",
+            "update": "'Cập nhật'",
+            "loai": "DisplayCounter",
+            "username": "123456",
+            "password": "123"
+        }
+    ]
+}

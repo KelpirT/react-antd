@@ -43,9 +43,8 @@ const menu = (
 );
 const HeaderPage = () => {
   return (
-    <div className="header-layout">
+ <div>
       <div></div>
-
       <div className="user-infor">
         <Dropdown overlay={menu} placement="bottomLeft" trigger={['click']}>
           <Button type="primary" shape="circle" className="bell-button" icon={<BellFilled className="bell" />} />
@@ -62,7 +61,7 @@ const HeaderPage = () => {
         </div>
         </Link>
       </div>
-    </div>
+      </div>
   )
 }
 export default HeaderPage;

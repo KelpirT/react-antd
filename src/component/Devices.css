@@ -179,3 +179,31 @@
     margin-left: 10px;
     font-size: 18px;
 }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+td,
+th {
+    border: 1px solid #e9e0e0;
+    text-align: left;
+    padding: 8px;
+    height: 45px;
+}
+
+tr:nth-child(odd) {
+    background-color: #fdf9f5;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+tr:nth-child(1) {
+    background-color: #FF7506;
+}
